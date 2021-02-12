@@ -1304,8 +1304,8 @@ class ClassObject(object):
                (re.search(ensure_bytes(telescopere), h['CTELE'], telescopereflags)
                 if telescopere is not None else True) and
                (h['SUBSCAN']==subscan if subscan is not None else True) and
-               (h['NUM'] >= number[0] and h['NUM'] < number[1]
-                if number is not None else True) and
+               #(h['NUM'] >= number[0] and h['NUM'] < number[1]
+                #if number is not None else True) and
                ('RESTF' in h and # Need to check that it IS a spectrum: continuum data can't be accessed this way
                 h['RESTF'] > frequency[0] and
                 h['RESTF'] < frequency[1]
