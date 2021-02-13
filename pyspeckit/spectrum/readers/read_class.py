@@ -1181,11 +1181,8 @@ class ClassObject(object):
         if hasattr(self,'_tels'):
             return self._tels
         else:
-            try: 
-                self._tels = set([h['XTEL'] for h in self.allind])
-            except:
-                print('XTEL parameter does not exist, input file should be v2')
-                self._tels = set([h['CTELE'] for h in self.allind])
+            self._tels = set([h['CTELE'] for h in self.allind])
+            #testing if CTELE even works
             return self._tels
 
     @property
